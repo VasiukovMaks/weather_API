@@ -1,0 +1,35 @@
+.navbarConteiner {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    color: rgb(153, 153, 153);
+    max-height: max-content;
+}
+
+.leftBlockNavbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.rightBlockNavbar {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-end;
+}
+
+.navbarTemp {
+    font-size: 55px;
+    color: black;
+    font-weight: lighter;
+}
+
+.navbarBlock {
+    padding-left: 2%;
+}
+
+.styleLocation {
+    color: black;
+    font-weight: bolder;
+}

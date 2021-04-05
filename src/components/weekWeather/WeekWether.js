@@ -1,5 +1,4 @@
 import DayWeather from "../dayWeather/DayWeather";
-import styleBlock from "./styleWeekWeather"
 
 const weatherTest = {
     day: "Mn",
@@ -10,7 +9,7 @@ const weatherTest = {
 function WeekWeather() {
 
     return (
-      <div style={styleBlock}>
+      <div>
             <DayWeather key={performance.now()} content={weatherTest}/>
             <DayWeather key={performance.now()} content={weatherTest}/>
             <DayWeather key={performance.now()} content={weatherTest}/>
