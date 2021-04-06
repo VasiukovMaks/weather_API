@@ -1,4 +1,6 @@
 import { Tabs } from "antd";
+import { CreateTable } from "./table";
+import "./stylePlots.css";
 
 const { TabPane } = Tabs;
 
@@ -6,15 +8,15 @@ function callback(key) {
   console.log(key);
 }
 
-export const TabsPlot = () => (
-  <Tabs defaultActiveKey="1" onChange={callback}>
-    <TabPane tab="Tab 1" key="1">
-      Content of Tab Pane 1
+export const TabsPlot = (weather) => (
+  <Tabs className="styleTabs" defaultActiveKey="1" onChange={callback}>
+    <TabPane tab="Temperature" key="1">
+      <CreateTable className="styleTabsContent" content={weather && weather}/>
     </TabPane>
-    <TabPane tab="Tab 2" key="2">
+    <TabPane tab="Humidity" key="2">
       Content of Tab Pane 2
     </TabPane>
-    <TabPane tab="Tab 3" key="3">
+    <TabPane tab="Wind" key="3">
       Content of Tab Pane 3
     </TabPane>
   </Tabs>

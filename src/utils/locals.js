@@ -41,3 +41,14 @@ export function getDataTime(ms) {
     const data = new Date(ms);
     return data;
 };
+
+export function getDataPlot(data) {
+    let dataPlot = [];
+        for (let i =0; i < 10; i++) {
+            dataPlot.push({
+                Time: (getDataTime(timeConventer(data.content[i].dt)).getHours() +":00"),
+                Temperature: tempConventerToC(data.content[i].temp),
+            });
+        };
+    return dataPlot
+};

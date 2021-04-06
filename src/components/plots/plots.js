@@ -1,4 +1,4 @@
-import { API_KEY, getDataTime } from "../../utils/locals";
+import { API_KEY } from "../../utils/locals";
 import "./stylePlots.css";
 import { useEffect, useState } from "react";
 import { TabsPlot } from "./tabs";
@@ -20,8 +20,8 @@ export function Plots({coord}) {
     }, [coord]);
     
       return (
-        <div>
-        <TabsPlot />
+        <div className="plotsComteiner">
+        <TabsPlot content={weather && weather.data.hourly}/>
         </div>
       );
     }

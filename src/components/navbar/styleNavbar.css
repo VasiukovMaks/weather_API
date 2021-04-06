@@ -1,7 +1,7 @@
 .navbarConteiner {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 75%;
     color: rgb(153, 153, 153);
     max-height: max-content;
 }

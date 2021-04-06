@@ -1,0 +1,16 @@
+.plotsComteiner {
+    width: 75%;
+    height: 300px;
+}
+
+.styleTabs {
+    height: 100%;
+}
+
+.styleTabsContent {
+    height: 100%;
+}
+
+.ant-tabs-content {
+    height: 100% !important;
+}
