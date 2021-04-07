@@ -1,26 +1,25 @@
 import React from 'react';
-import { AreaChart, Area, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
-export function CreateTable({content}) {
+export function CreateBarChart({content}) {
 
     return (
       <ResponsiveContainer width="100%" height="100%">
-        <AreaChart
+        <BarChart
           width={500}
-          height={400}
+          height={300}
           data={content}
           margin={{
-            top: 15,
+            top: 10,
             right: 5,
             left: 5,
             bottom: 0,
           }}
         >
-          
           <XAxis dataKey="Time" stroke="#999999"/>
           <Tooltip />
-          <Area type="monotone" dataKey="Temperature" stroke="#f19900" fill="#ffe0b5" label={{position: "top", fill: "#999999"}}/>
-        </AreaChart>
+          <Bar dataKey="Humidity" fill="#75cbf0" label={{position: "top", fill: "#999999", content: "Time"}}/>
+        </BarChart>
       </ResponsiveContainer>
     );
   };
