@@ -10,7 +10,7 @@ export function CreateBarChart({content}) {
           height={300}
           data={content}
           margin={{
-            top: 10,
+            top: 15,
             right: 5,
             left: 5,
             bottom: 0,

@@ -2,7 +2,8 @@ import { Tabs } from "antd";
 import { CreateTable } from "./table";
 import { CreateBarChart } from "./bar";
 import "./stylePlots.css";
-import {getDataPlot, getWindImg} from "../../utils/locals";
+import {getDataPlot} from "../../utils/locals";
+import {WindCard} from "../card/card"
 
 const { TabPane } = Tabs;
 
@@ -25,7 +26,7 @@ export function TabsPlot({content}) {
       <CreateBarChart className="styleTabsContent" content={data && data}/>
     </TabPane>
     <TabPane tab="Wind" key="3">
-    <img style={{width: "20px"}} src={getWindImg(data && data[0].WindDeg)} alt="Image"></img>
+    <WindCard content={data && data}/>
     </TabPane>
   </Tabs>
 )};

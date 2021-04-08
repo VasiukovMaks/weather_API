@@ -44,7 +44,7 @@ export function getDataTime(ms) {
 
 export function getDataPlot(data) {
     let dataPlot = [];
-        for (let i =0; i < 10; i++) {
+        for (let i =0; i < 8; i++) {
             dataPlot.push({
                 Time: (getDataTime(timeConventer(data[i].dt)).getHours() +":00"),
                 Temperature: tempConventerToC(data[i].temp),
@@ -68,22 +68,22 @@ export function getWindImg(deg) {
 export const windImg = (condition) => {
     switch (condition) {
         case(8):
-            return `/img/north.png`
-        case(1):
-            return `/img/northeast.png`
-        case(2):
-            return `/img/east.png`
-        case(3):
-            return `/img/southeast.png`
-        case(4):
             return `/img/south.png`
-        case(5):
+        case(1):
             return `/img/southwest.png`
-        case(6):
+        case(2):
             return `/img/west.png`
-        case(7):
+        case(3):
             return `/img/northwest.png`
-        default:
+        case(4):
             return `/img/north.png`
+        case(5):
+            return `/img/northeast.png`
+        case(6):
+            return `/img/east.png`
+        case(7):
+            return `/img/southeast.png`
+        default:
+            return `/img/south.png`
     };
 };
