@@ -44,7 +44,8 @@ export function getDataTime(ms) {
 
 export function getDataPlot(data) {
     let dataPlot = [];
-        for (let i =0; i < 8; i++) {
+        for (let i =0; i < 24;) {
+            i = i + 3;
             dataPlot.push({
                 Time: (getDataTime(timeConventer(data[i].dt)).getHours() +":00"),
                 Temperature: tempConventerToC(data[i].temp),
@@ -54,6 +55,21 @@ export function getDataPlot(data) {
             });
         };
     return dataPlot
+};
+
+export function getDataCards(data) {
+    console.log(data)
+    let dataCards = [];
+        for (let i =0; i < 8; i++) {
+            const date = getDataTime(timeConventer(data.daily[i].dt));
+            dataCards.push({
+                Date: (date.getDate() + "." + ((date.getMonth()+1) < 10 ? "0" + (date.getMonth()+1): (date.getMonth()+1))),
+                Weather: weatherImg(data.daily[i].weather[0].main.toLowerCase()),
+                MaxTemp: (tempConventerToC(data.daily[i].temp.max) + "°"),
+                MinTemp: (tempConventerToC(data.daily[i].temp.min) + "°"),
+            });
+        };
+    return dataCards
 };
 
 export function getWindImg(deg) {

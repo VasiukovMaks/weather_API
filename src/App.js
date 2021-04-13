@@ -3,6 +3,7 @@ import {Plots} from "./components/plots/plots";
 import { useState } from "react";
 import "./styleApp.css";
 import 'antd/dist/antd.css';
+import {TabsDays} from "./components/tabsDays/tabsDays"
 
 function App() {
   const [coord, setCoord] = useState();
@@ -22,6 +23,7 @@ function App() {
       <div className="mainDiv">
         <Navbar coord={coord && coord} />
         <Plots coord={coord && coord} />
+        <TabsDays coord={coord && coord} />
       </div>
   );
 }

@@ -1,0 +1,22 @@
+.cardDays {
+    display: flex;
+    width: 75%;
+}
+
+.cardDay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 12.5%;
+    height: 130px;
+    align-items: center;
+    color: rgb(153, 153, 153);
+}
+
+.tempBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
